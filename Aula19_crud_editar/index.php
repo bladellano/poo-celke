@@ -22,7 +22,7 @@
             if ($linha['modified'] != ""):
                 echo "Alterado: " . date('d/m/Y H:i:s', strtotime($linha['modified']));
             endif;
-            echo '<a href="visualizar.php?id=' . $linha['id'] . '">Visualizar</a><br>';
+            echo '<br><a href="visualizar.php?id=' . $linha['id'] . '">Visualizar</a><br>';
             echo '<a href="editar.php?id=' . $linha['id'] . '">Editar</a><br>';
             echo "<hr>";
         }

@@ -16,10 +16,10 @@ class Conn {
     private static function conectar() {
         try {
 
-            if (self::$Connect == null)://se a conexao for nula, ele irá fazer a conexão.
+//            if (self::$Connect == null)://se a conexao for nula, ele irá fazer a conexão.
                 self::$Connect = new PDO('mysql:host=' . self::$Host . ';dbname=' . self::$Dbname, self::$User, self::$Pass);
                 return self::$Connect;
-            endif;
+//            endif;
         } catch (Exception $ex) {
             echo "Mensagem:" . $ex->getMessage();
         }

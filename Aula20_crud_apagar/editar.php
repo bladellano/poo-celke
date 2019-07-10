@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html> 
 <html lang="pt=br">
     <head>
@@ -6,7 +7,7 @@
     </head>
     <body>
         <h1>Editar Usuário</h1>
- 
+        <a href="index.php">Listar</a><br><br>
         <?php
         error_reporting(E_ALL | E_STRICT);
 
@@ -25,7 +26,8 @@
             $stmt->bindParam(':id', $Dados['id'], PDO::PARAM_INT);
             $stmt->execute();
             if ($stmt->execute()):
-                echo "<p style='color:green'>Registro alteado com sucesso.</p>";
+                $_SESSION['msg'] = "<p style='color:green'>Registro editado com sucesso</p>";
+                header("location: index.php");
             else:
                 echo "<p style='color:red'>Registro não editado.</p>";
 

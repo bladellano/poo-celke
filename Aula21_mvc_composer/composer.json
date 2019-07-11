@@ -1,4 +1,17 @@
 {
     "name": "Caio",
-    "descri"
+    "description": "Projeto PHP OO",
+    "authors": [
+        {
+            "name": "Caio Dellano",
+            "email": "caio.silva@seduc.pa.gov.br"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sts\\": "app/sts",
+            "Core\\":"core"
+        }
+    }
 }

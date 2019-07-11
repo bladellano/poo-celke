@@ -36,5 +36,12 @@ class ConfigController {
         }
         echo "Classe: {$this->UrlController} - Método: {$this->UrlMetodo}<br>";
     }
+    
+    public function carregar() {
+        $classe = "\\Sts\\Controllers\\".$this->UrlController;
+        $classeCarregar = new $classe;
+        $classeCarregar->index();
+ 
+    }
 
 }

@@ -34,12 +34,11 @@ class ConfigController {
             $this->UrlController = 'home';
             $this->UrlMetodo = 'index';
         }
-    
     }
 
     public function carregar() {
 
-        $classe = "\\Sts\\Controllers\\".ucfirst($this->UrlController);     
+        $classe = "\\Sts\\Controllers\\" . ucfirst($this->UrlController);
         $classeCarregar = new $classe;
         $classeCarregar->index();
     }

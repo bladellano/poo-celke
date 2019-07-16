@@ -34,7 +34,7 @@ class ConfigController {
             $this->UrlController = 'home';
             $this->UrlMetodo = 'index';
         }
-        echo "Classe: {$this->UrlController} - Método: {$this->UrlMetodo}<br>";
+    
     }
     
     public function carregar() {

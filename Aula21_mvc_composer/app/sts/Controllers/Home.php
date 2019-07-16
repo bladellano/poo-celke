@@ -1,4 +1,5 @@
 <?php
+
 namespace Sts\Controllers;
 /**
  * Description of Home
@@ -7,6 +8,6 @@ namespace Sts\Controllers;
  */
 class Home {
    public function index() {
-       echo 'Controller da página home';
+       echo 'Controller da página Home';
    }
 }

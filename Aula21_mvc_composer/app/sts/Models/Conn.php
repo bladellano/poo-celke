@@ -1,5 +1,6 @@
 <?php
 namespace Sts\Models;
+
 use PDO;
 /**
  * Description of Conn

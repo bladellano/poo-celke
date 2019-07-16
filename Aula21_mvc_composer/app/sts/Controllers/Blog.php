@@ -7,7 +7,9 @@ namespace Sts\Controllers;
  */
 class Blog {
     public function index() {
-         $listarArtigo = new \Sts\Models\StsListaBlog();
+ 
+        $listarArtigo = new \Sts\Models\StsListarBlog();
+ 
         $listarArtigo->listar();
     }
 }

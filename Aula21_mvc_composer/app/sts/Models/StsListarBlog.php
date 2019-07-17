@@ -23,10 +23,9 @@ class StsListarBlog {
         $stmt = $listarArtigos->getConn()->prepare($sql);
         $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();
-        //$stmt->fetch(PDO::FETCH_ASSOC);
-        $this->Resultado = $stmt->fetch(PDO::FETCH_ASSOC);
-        //$this->Resultado = $stmt->fecthAll();        
-        print_r($this->Resultado);
+//        $this->Resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $this->Resultado['artigos'] = $stmt->fetchAll();
+        return $this->Resultado;
     }
 
 }
